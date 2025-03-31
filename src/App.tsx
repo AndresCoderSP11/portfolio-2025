@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+
 import AllProjects from './components/AllProjects'
 import BodyHeader from './components/BodyHeader'
 import Navegador from './components/Navegador'

@@ -1,5 +1,3 @@
-import React from 'react'
-import TypewriterComponent from 'typewriter-effect'
 
 export default function BodyHeader() {
     return (

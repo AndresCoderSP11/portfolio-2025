@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../styles/style-for-div.css';
 
 export default function AllProjects() {
