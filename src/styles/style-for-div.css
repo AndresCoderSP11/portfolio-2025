@@ -1,0 +1,113 @@
+/* Contenedor principal */
+.shine-container {
+  position: relative;
+  border-radius: 15px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Pseudo-elemento de brillo */
+.shine-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%; /* Ajustar el ancho según sea necesario */
+  height: 100%;
+  background-image: linear-gradient(90deg, transparent 0%, rgba(209, 56, 255, 0.658)); /* Ajustar el color */
+  transform: skewX(-0.08turn) translateX(-200%);
+  animation: shineAnimation 2.2s infinite ease-in-out;
+}
+
+/* Animación del brillo */
+/* Animación del brillo */
+@keyframes shineAnimation {
+  0% {
+    transform: skewX(-0.08turn) translateX(-100%);
+  }
+  50% {
+    transform: skewX(-0.08turn) translateX(400%);
+  }
+  100% {
+    transform: skewX(-0.08turn) translateX(-100%);
+  }
+}
+
+
+
+
+/* Contenedor principal */
+.shine-container-programa {
+  position: relative;
+  border-radius: 15px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.3));
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.377);
+  overflow: hidden;
+}
+
+/* Pseudo-elemento de brillo */
+.shine-container-programa::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%; /* Ajustar el ancho según sea necesario */
+  height: 100%;
+  background-image: linear-gradient(90deg, transparent 0%, rgba(241, 255, 110, 0.658)); /* Ajustar el color */
+  transform: skewX(-0.08turn) translateX(-200%);
+  animation: shineAnimation 2.2s infinite ease-in-out;
+}
+
+/* Animación del brillo */
+/* Animación del brillo */
+@keyframes shineAnimation {
+  0% {
+    transform: skewX(-0.08turn) translateX(-100%);
+  }
+  50% {
+    transform: skewX(-0.08turn) translateX(400%);
+  }
+  100% {
+    transform: skewX(-0.08turn) translateX(-100%);
+  }
+}
+
+
+/* Contenedor principal */
+.shine-image-container {
+  position: relative;
+  display: inline-block; /* Para que el contenedor se ajuste al tamaño de la imagen */
+  overflow: hidden;
+}
+
+/* Imagen dentro del contenedor */
+.shine-image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Para que la imagen cubra el contenedor */
+}
+
+/* Pseudo-elemento de brillo para la imagen */
+.shine-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%; /* Puedes ajustar el ancho */
+  height: 100%;
+  background-image: linear-gradient(90deg, transparent 0%, #fff6); /* Color del brillo */
+  transform: skewX(-0.08turn) translateX(-100%);
+  animation: shineAnimation 2s infinite ease-in-out;
+}
+
+/* Animación del brillo */
+@keyframes shineAnimation {
+  0% {
+    transform: skewX(-0.08turn) translateX(-100%);
+  }
+  100% {
+    transform: skewX(-0.08turn) translateX(375%);
+  }
+}

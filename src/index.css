@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+
+@layer components {
+    .fontRobotoSlab {
+        font-family: "Roboto Slab", serif;
+        font-optical-sizing: auto;
+    }
+}
+
+@layer components {
+    .pinturaBackground {
+        background-image: url('/fondo-pintura.png');
+        background-repeat: no-repeat;
+
+    }
+}
+
+@layer components {
+    .purple-figma {
+        color: #8760FF;
+    }
+}
+
+@layer components {
+    .background-green-figma {
+        background: #7FDF44;
+    }
+}
+
+
+@layer components {
+    .figma-green {
+        color: #7FDF44;
+    }
+}
+
+@layer components {
+    .shadow-purple {
+        box-shadow: 6px 6px 25px 8px #ac68ff80;
+    }
+}
+
+
+@layer components{
+    .shadow-green{
+        box-shadow: 6px 6px 25px 8px #7FDF44;
+    }   
+}
+
