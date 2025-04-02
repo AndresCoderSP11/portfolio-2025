@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+import { fadeIn } from "../utils/motion"
 
 export default function DomainTecnologies() {
 
@@ -76,12 +78,18 @@ export default function DomainTecnologies() {
             <div className='border  w-1/2'>
                 <p className=' text-center text-white font-bold fontRobotoSlab text-2xl'>Frontend</p>
                 <div className=' grid grid-cols-3 grid-rows-3 gap-24 p-10'>
-                    {tecnologiasFrontend.map((tecnologia) => (
+                    {tecnologiasFrontend.map((tecnologia,count) => (
                         <>
+                            
                             <div className=''>
-                                <div className='shine-container-programa bg-gray-800 flex justify-center rounded-4xl shadow-xl py-7 shadow-amber-100/25 mb-4 '>
+                                <motion.div 
+                                variants={fadeIn("left", "tween", 0.2+(count*0.1), 1)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{once:false,amount:0.25}}
+                                className='shine-container-programa bg-gray-800 flex justify-center rounded-4xl shadow-xl py-7 shadow-amber-100/25 mb-4 '>
                                     <img className='h-10' src={tecnologia.imagen} alt="Imagen de Tecnologia" />
-                                </div>
+                                </motion.div>
                                 <p className='text-center text-white mt-4 font-bold fontRobotoSlab text-xl'>{tecnologia.nombre}</p>
                             </div>
                         </>
@@ -92,12 +100,17 @@ export default function DomainTecnologies() {
             <div className='w-1/2 border '>
                 <p className=' text-center text-white font-bold fontRobotoSlab text-2xl'>Backend</p>
                 <div className=' grid grid-cols-3 grid-rows-3 p-10 gap-24'>
-                    {tecnologiasBackend.map((tecnologia) => (
+                    {tecnologiasBackend.map((tecnologia,count) => (
                         <>
                             <div className=''>
-                                <div className='shine-container-programa bg-gray-800 flex justify-center rounded-4xl shadow-xl py-7 shadow-amber-100/25 mb-4 '>
+                                <motion.div 
+                                variants={fadeIn("left", "tween", 0.2+(count*0.1), 1)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{once:false,amount:0.25}}
+                                className='shine-container-programa bg-gray-800 flex justify-center rounded-4xl shadow-xl py-7 shadow-amber-100/25 mb-4 '>
                                     <img className='h-10' src={tecnologia.imagen} alt="Imagen de Tecnologia" />
-                                </div>
+                                </motion.div>
                                 <p className='text-center text-white mt-4 font-bold fontRobotoSlab text-xl'>{tecnologia.nombre}</p>
                             </div>
                         </>

@@ -6,6 +6,8 @@ import WhereIStudy from './components/WhereIStudy'
 import Typewriter from 'typewriter-effect';
 import DomainTecnologies from './components/DomainTecnologies';
 import ExperienceWork from './components/ExperienceWork';
+import { motion } from 'framer-motion';
+import { fadeIn } from './utils/motion';
 
 export default function App() {
 
@@ -15,7 +17,11 @@ export default function App() {
         <div className=' container py-6 border mx-auto  flex items-center justify-between'>
           <Navegador></Navegador>
         </div>
-        <p className=' text-center text-6xl  fontRobotoSlab font-bold p-6 text-white'>!Hola me presento, soy
+        <motion.p
+        variants={fadeIn("down", "tween", 0.3, 1)}
+                                initial="hidden"
+                                animate="show"
+        className=' text-center text-6xl  fontRobotoSlab font-bold p-6 text-white'>!Hola me presento, soy
           <span className=' text-purple-600'>
             <Typewriter
               options={{
@@ -37,14 +43,14 @@ export default function App() {
                   .start(); // Vuelve a empezar automáticamente por el loop
               }}
             />
-          </span></p>
+          </span></motion.p>
         <div className=' container py-6 border mx-auto  grid grid-cols-3 justify-between'>
           <BodyHeader></BodyHeader>
         </div>
 
         <p className=' figma-green text-4xl text-center fontRobotoSlab'>Mis Proyectos</p>
         <p className=' text-white text-center fontRobotoSlab'>Realice el analisis y la implementacion de estos sistemas</p>
-        <div className=' max-w-7xl mt-10 border-amber-50  py-6 border mx-auto'>
+        <div className=' max-w-7xl mt-10  py-6 border mx-auto'>
 
           <AllProjects></AllProjects>
           <AllProjects></AllProjects>
@@ -55,7 +61,9 @@ export default function App() {
         <p className=' text-white text-center fontRobotoSlab'>Les comparto mi experiencia laboral y los retos que tuve</p>
 
         {/* En esta parte vamos a Exponer Mi experiencia en Desarrollo */}
-        <div className=' max-w-7xl mt-10 border-amber-50  py-6 border mx-auto'>
+        <div className=' max-w-7xl mt-10   py-6 border mx-auto'>
+          <ExperienceWork></ExperienceWork>
+          <ExperienceWork></ExperienceWork>
           <ExperienceWork></ExperienceWork>
         </div>
 
@@ -63,7 +71,7 @@ export default function App() {
         <p className=' text-white text-center fontRobotoSlab'>Me desenvuelvo muy bien en estas tecnologias</p>
 
         {/* Domain Tecnologies */}
-        <div className='mx- max-w-7xl mt-2   py-6 border mx-auto flex justify-between gap-3'>
+        <div className='mx- max-w-7xl mt-2   py-6  mx-auto flex justify-between gap-3'>
           <DomainTecnologies></DomainTecnologies>
 
         </div>
@@ -71,7 +79,7 @@ export default function App() {
         <p className=' figma-green text-4xl text-center fontRobotoSlab mt-5'>Mis Estudios</p>
         <p className=' text-white text-center fontRobotoSlab'>Soy egresado de la Universidad Nacional de Ingenieria</p>
 
-        <div className='mx- max-w-7xl mt-10   py-6 border mx-auto flex flex-col items-center'>
+        <div className='mx- max-w-7xl mt-10   py-6  mx-auto flex flex-col items-center'>
           <WhereIStudy></WhereIStudy>
         </div>
 

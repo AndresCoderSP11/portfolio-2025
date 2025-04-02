@@ -1,14 +1,25 @@
+import { motion } from "framer-motion"
+import { fadeIn } from "../utils/motion"
+
 
 export default function WhereIStudy() {
 
 
     return (
         <>
-            <div className=''>
+            <motion.div 
+            variants={fadeIn("right", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className=''>
                 <img src="/UNI-figma.png" alt="Imagen de la universidad nacional de Ingenieria" />
-            </div>
+            </motion.div>
 
-            <div className=' grid grid-cols-2 mt-10 gap-20'>
+            <motion.div 
+            variants={fadeIn("right", "tween", 0.5, 1)}
+            initial="hidden"
+            whileInView="show"
+            className=' grid grid-cols-2 mt-10 gap-20'>
                 <div className=' flex flex-col gap-10 text-center fontRobotoSlab font-bold'>
                     <div>
                         <h1 className=' text-white'>CARRERA</h1>
@@ -29,9 +40,13 @@ export default function WhereIStudy() {
                         <p className=' text-white'>2020-2025</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <button className=' mx-auto shadow-purple mt-10 bg-purple-600 uppercase px-6 py-2 rounded-2xl text-white font-bold fontRobotoSlab'> Descagar Constancia de Estudios</button>
+            <motion.button 
+            variants={fadeIn("up", "tween", 0.3, 1)}
+            initial="hidden"
+            whileInView="show"
+            className=' mx-auto shadow-purple mt-10 bg-purple-600 uppercase px-6 py-2 rounded-2xl text-white font-bold fontRobotoSlab'> Descagar Constancia de Estudios</motion.button>
 
         </>
     )
